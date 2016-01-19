@@ -8,14 +8,13 @@ class BitwiseManipulator
     /**
      * Convert a short binary into a long representation.
      *
-     * @param  $shorthand  A shorter representation of a binary string.
+     * @param  string $shorthand  A shorter representation of a binary string.
      * @param  int  $repeat  The number of times every bit should be repeated.
-     * @param  bool  $array  Whether an array or string of bits is passed in.
      * @return string
      */
-    public static function generateExpandedBinary($shorthand, $repeat = 4, $array = true)
+    public static function generateExpandedBinary($shorthand, $repeat = 4)
     {
-        if (! $array) {
+        if (! is_array($shorthand)) {
             $shorthand = str_split($shorthand);
         }
 

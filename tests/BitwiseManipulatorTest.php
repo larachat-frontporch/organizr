@@ -14,11 +14,11 @@ class BitwiseManipulatorTest extends TestCase
 
     public function testBinaryStringExpansionWithStringArgument()
     {
-        $this->assertEquals('0000111100001111', BitwiseManipulator::generateExpandedBinary('0101', 4, false));
+        $this->assertEquals('0000111100001111', BitwiseManipulator::generateExpandedBinary('0101', 4));
     }
 
     public function testBinaryStringExpansionWithNonDefaultRepeatLength()
     {
-        $this->assertEquals('00110011', BitwiseManipulator::generateExpandedBinary('0101', 2, false));
+        $this->assertEquals('00110011', BitwiseManipulator::generateExpandedBinary('0101', 2));
     }
 }
