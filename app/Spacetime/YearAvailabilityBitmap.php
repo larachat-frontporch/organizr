@@ -27,4 +27,9 @@ class YearAvailabilityBitmap
     {
 
     }
+
+    public function GMPInstance()
+    {
+        return $this->binary;
+    }
 }
