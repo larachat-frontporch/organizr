@@ -35,7 +35,6 @@ var app = new Vue({
                     this.times[index] = !this.times[index];
                 }
                 event.target.classList.toggle('green');
-                event.target.classList.toggle('active');
             }
         },
 
