@@ -21,7 +21,10 @@
         ],
         "psr-4": {
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "app/Helpers/gmp_extended.php"
+        ]
     },
     "autoload-dev": {
         "classmap": [
