@@ -1,6 +1,6 @@
 @extends('index')
 @section('content')
-    <div id="app" @mousedown="isDown(true)" @mouseup="isDown(false)">
+    <div id="app" class="card" @mousedown="isDown(true)" @mouseup="isDown(false)">
 
         <table class="striped centered">
 
