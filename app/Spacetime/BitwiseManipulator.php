@@ -5,6 +5,10 @@ namespace App\Spacetime;
 
 class BitwiseManipulator
 {
+    const INTERVAL_DURATION = 15;
+    const INTERVALS_PER_HOUR = 60 / self::INTERVAL_DURATION;
+    const INTERVALS_PER_DAY = self::INTERVALS_PER_HOUR * 24;
+
     /**
      * Convert a short binary into a long representation.
      *
