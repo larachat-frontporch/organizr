@@ -1,4 +1,4 @@
-
+@extends('index')
 @section('content')
     <div id="app" @mousedown="isDown(true)" @mouseup="isDown(false)">
 
