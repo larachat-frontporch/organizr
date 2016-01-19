@@ -26,4 +26,9 @@ class BitwiseManipulator
             return str_repeat($bit, $repeat);
         }, $shorthand));
     }
+
+    public static function createBinaryFromString($binaryString)
+    {
+        return gmp_init($binaryString, 2);
+    }
 }
