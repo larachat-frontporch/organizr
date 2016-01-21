@@ -6,6 +6,7 @@
   "dependencies": {
     "laravel-elixir": "^4.0.0",
     "materialize-css": "^0.97.5",
+    "sticky-table-headers": "^0.1.19",
     "vue": "^1.0.15"
   }
 }

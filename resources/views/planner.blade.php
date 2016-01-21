@@ -4,7 +4,7 @@
 
         <table class="striped centered">
 
-            <thead class="hide-on-small-only">
+            <thead class="hide-on-small-only white">
                 <tr>
                     <th>Monday</th>
                     <th>Tuesday</th>
@@ -17,7 +17,7 @@
             </thead>
 
 
-            <thead class="hide-on-med-and-up">
+            <thead class="hide-on-med-and-up white">
                 <tr>
                     <th>Mon.</th>
                     <th>Tue.</th>
@@ -44,7 +44,6 @@
             </tbody>
 
         </table>
-
 
     </div>
 @stop
