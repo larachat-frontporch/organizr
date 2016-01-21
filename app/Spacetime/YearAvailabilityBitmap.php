@@ -55,7 +55,7 @@ class YearAvailabilityBitmap
             $yearlyMap = gmp_shiftl($yearlyMap, Carbon::DAYS_PER_WEEK * BitwiseManipulator::INTERVALS_PER_DAY);
         }
         $yearlyMap = gmp_add($yearlyMap, gmp_shiftr($weeklyMap, $daysToShift * BitwiseManipulator::INTERVALS_PER_DAY));
-
+        $yearlyMap = gmp_and($yearlyMap, gmp_sub(gmp_pow(gmp_init(2, 10), BitwiseManipulator::INTERVALS_PER_DAY * ((new Carbon)->endOfYear()->dayOfYear + 1)), gmp_init(1, 10)));
 
         return new static($yearlyMap);
     }
