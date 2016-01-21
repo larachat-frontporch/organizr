@@ -7,3 +7,5 @@ Homestead.json
 /public/build
 /public/css/app.css*
 /public/js/app.js*
+/public/js/vendor.js*
+/public/js/all.js*
