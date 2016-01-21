@@ -49,12 +49,13 @@ class YearAvailabilityBitmap
         // The rest is done by left shifting and adding weeks.
         $daysToShift = Carbon::create(null, 1, 1, 0, 0, 0)->day ?: 7;
         $daysToShift--;
-        $yearlyMap = gmp_shiftr($weeklyMap, $daysToShift * BitwiseManipulator::INTERVALS_PER_DAY);
-
-        for ($i = 1; $i <= 52; $i++) {
-            $yearlyMap = gmp_shiftl($yearlyMap, Carbon::DAYS_PER_WEEK * BitwiseManipulator::INTERVALS_PER_DAY);
+        $yearlyMap = gmp_init(0);
+        for ($i = 1; $i < 52; $i++) {
             $yearlyMap = gmp_add($yearlyMap, $weeklyMap);
+            $yearlyMap = gmp_shiftl($yearlyMap, Carbon::DAYS_PER_WEEK * BitwiseManipulator::INTERVALS_PER_DAY);
         }
+        $yearlyMap = gmp_add($yearlyMap, gmp_shiftr($weeklyMap, $daysToShift * BitwiseManipulator::INTERVALS_PER_DAY));
+
 
         return new static($yearlyMap);
     }
