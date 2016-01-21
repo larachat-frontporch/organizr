@@ -14,11 +14,26 @@
     </head>
     <body>
 
+
         <div class="container">
+
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="/" class="brand-logo center">
+                        <span class="blue-text text-darken-2">Organizr</span>.co
+                    </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a class="waves-effect waves-light" href="#@{{ route('about') }}">About</a></li>
+                        <li><a class="waves-effect waves-light" href="#@{{ route('contact') }}">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
             @yield('content')
         </div>
 
 
+        <script src="/build/js/vendor.js"></script>
         <script src="{{ elixir('js/app.js') }}"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
