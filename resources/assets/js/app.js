@@ -21,6 +21,22 @@ var app = new Vue({
 
     methods: {
 
+        formatTime: function(day, hour, quarter) {
+
+            var quarterLength = 60 / 4;
+            var quarterDisplay =  quarterLength * quarter;
+
+            if(typeof quarter === 'undefined' || isNaN(quarter) || quarter === 4 || quarter === 0) {
+                quarterDisplay = '00';
+            }
+            var str = "" + hour;
+            var pad = "00";
+            str = pad.substring(0, pad.length - str.length) + str;
+            str = str + ":" + quarterDisplay;
+            return str;
+
+        },
+
         isDown: function(down) {
             this.mouseDown = down;
         },
